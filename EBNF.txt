@@ -1,11 +1,12 @@
 BLOCK = { STATEMENT } ;
-STATEMENT = ASSIGNMENT | LOOP | IF | "λ" | PRINT | ATTACK | DEFEND, ;
+STATEMENT = ASSIGNMENT | LOOP | IF | "λ" | PRINT | ATTACK | DEFEND | MOVE, ;
 ASSIGNMENT = CHARACTER, IDENTIFIER, "=", EXPRESSION ;
 PRINT = "print", "(", EXPRESSION, ")" ;
 WHILE = "while", BOOL_EXP, "do", "{", "\n", { ( STATEMENT ), "λ" }, "}";
 IF = "if", BOOL_EXP, "then", "{","\n", "λ", { ( STATEMENT ), "λ" }, ( "λ" | ( "else", "\n", "λ", { ( STATEMENT ), "λ" })), "}" ;
 ATTACK = "attack", ( "a" | "b" | "c" | "d" ), CHARACTER, CHARACTER;
 DEFEND = "defend", CHARACTER;
+MOVE = "move", CHARACTER, ( "up" | "down" | "right" | "left" );
 BOOL_EXP = BOOL_TERM, { ("or"), BOOL_TERM } ;
 BOOL_TERM = REL_EXP, { ("and"), REL_EXP } ;
 REL_EXP = ( EXPRESSION, { ("==" | ">" | "<"), EXPRESSION } | DEFENSE);
