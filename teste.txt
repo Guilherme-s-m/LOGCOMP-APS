@@ -1,0 +1,16 @@
+char_a warrior = 5;
+char_b mage = 10;
+print(warrior);
+
+if warrior > mage then {
+    attack a char_b char_b;
+} else {
+    defend char_b;
+}
+
+while warrior < mage do {
+    move char_a right;
+    warrior = warrior + 1;
+}
+
+print(read());
