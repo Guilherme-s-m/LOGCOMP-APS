@@ -1,0 +1,6 @@
+if char_a_life < 50 then
+    defend char_a
+end
+if char_b_life > 0 then
+    attack char_b char_a
+end

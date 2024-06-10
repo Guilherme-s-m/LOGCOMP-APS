@@ -1,0 +1,9 @@
+if char_a_life > 0 then
+    attack char_a char_b
+end
+if char_b_life < 10 then
+    attack char_a char_b
+end
+if char_b_life < 5 then
+    attack char_a char_b
+end

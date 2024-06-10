@@ -56,38 +56,35 @@ extern int yydebug;
     YYUNDEF = 257,                 /* "invalid token"  */
     NUMBER = 258,                  /* NUMBER  */
     IDENTIFIER = 259,              /* IDENTIFIER  */
-    CHARACTER = 260,               /* CHARACTER  */
-    PRINT = 261,                   /* PRINT  */
-    WHILE = 262,                   /* WHILE  */
-    DO = 263,                      /* DO  */
-    IF = 264,                      /* IF  */
-    THEN = 265,                    /* THEN  */
-    ELSE = 266,                    /* ELSE  */
-    ATTACK = 267,                  /* ATTACK  */
-    DEFEND = 268,                  /* DEFEND  */
-    MOVE = 269,                    /* MOVE  */
-    UP = 270,                      /* UP  */
-    DOWN = 271,                    /* DOWN  */
-    RIGHT = 272,                   /* RIGHT  */
-    LEFT = 273,                    /* LEFT  */
-    READ = 274,                    /* READ  */
-    NOT = 275,                     /* NOT  */
+    PRINT = 260,                   /* PRINT  */
+    IF = 261,                      /* IF  */
+    THEN = 262,                    /* THEN  */
+    ELSE = 263,                    /* ELSE  */
+    END = 264,                     /* END  */
+    ATTACK = 265,                  /* ATTACK  */
+    DEFEND = 266,                  /* DEFEND  */
+    MOVE = 267,                    /* MOVE  */
+    UP = 268,                      /* UP  */
+    DOWN = 269,                    /* DOWN  */
+    RIGHT = 270,                   /* RIGHT  */
+    LEFT = 271,                    /* LEFT  */
+    WAIT = 272,                    /* WAIT  */
+    CHAR_A = 273,                  /* CHAR_A  */
+    CHAR_B = 274,                  /* CHAR_B  */
+    OR = 275,                      /* OR  */
     AND = 276,                     /* AND  */
-    OR = 277,                      /* OR  */
-    EQ = 278,                      /* EQ  */
-    GT = 279,                      /* GT  */
-    LT = 280,                      /* LT  */
-    ASSIGN = 281,                  /* ASSIGN  */
-    PLUS = 282,                    /* PLUS  */
-    MINUS = 283,                   /* MINUS  */
-    MULTIPLY = 284,                /* MULTIPLY  */
-    DIVIDE = 285,                  /* DIVIDE  */
-    LBRACE = 286,                  /* LBRACE  */
-    RBRACE = 287,                  /* RBRACE  */
-    LPAREN = 288,                  /* LPAREN  */
-    RPAREN = 289,                  /* RPAREN  */
-    LAMBDA = 290,                  /* LAMBDA  */
-    SEMICOLON = 291                /* SEMICOLON  */
+    EQ = 277,                      /* EQ  */
+    GT = 278,                      /* GT  */
+    LT = 279,                      /* LT  */
+    PLUS = 280,                    /* PLUS  */
+    MINUS = 281,                   /* MINUS  */
+    MULT = 282,                    /* MULT  */
+    DIV = 283,                     /* DIV  */
+    NOT = 284,                     /* NOT  */
+    LPAREN = 285,                  /* LPAREN  */
+    RPAREN = 286,                  /* RPAREN  */
+    COMMA = 287,                   /* COMMA  */
+    NEWLINE = 288                  /* NEWLINE  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -96,12 +93,12 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 17 "parser.y"
+#line 14 "parser.y"
 
-    int ival;
-    char *sval;
+    int num;
+    char* id;
 
-#line 105 "parser.tab.h"
+#line 102 "parser.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;
